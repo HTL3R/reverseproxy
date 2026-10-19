@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Backend A</title>
+    <style>
+      body { font-family: sans-serif; margin: 2rem; }
+      table { border-collapse: collapse; }
+      td { border: 1px solid #ccc; padding: .3rem .6rem; }
+      td:first-child { font-weight: bold; }
+    </style>
+  </head>
+  <body>
+    <h1>Reverse Proxy Target A</h1>
+    <p>Diese Seite wird von backend-a ausgeliefert.</p>
+    <h2>Beim Backend angekommene Request-Header</h2>
+    <table>
+      <tr><td>Host</td><td><!--# echo var="http_host" default="(fehlt)" --></td></tr>
+      <tr><td>X-Forwarded-For</td><td><!--# echo var="http_x_forwarded_for" default="(fehlt)" --></td></tr>
+      <tr><td>X-Real-IP</td><td><!--# echo var="http_x_real_ip" default="(fehlt)" --></td></tr>
+      <tr><td>X-Forwarded-Proto</td><td><!--# echo var="http_x_forwarded_proto" default="(fehlt)" --></td></tr>
+      <tr><td>Anfrage kam von</td><td><!--# echo var="remote_addr" --></td></tr>
+    </table>
+  </body>
+</html>
